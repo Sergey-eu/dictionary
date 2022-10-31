@@ -1,4 +1,18 @@
-# Prospection Coding Exercise
+# Summary
+- inspired by the state reducer pattern when creating components
+- `npm` has been replaced by `yarn` as a more performant, safer and easier to use tool
+- `redux` replaced with `mobx` as a more concise and scalable state manager and an opportunity to show how an alternative might look like
+- traditional `css` replaced with `css modules` using `scss` and `css variables`
+- `@corets` was used for common hooks, for example `throttle` for favorite button
+- mobile version triggered using `react-device-detect` package 
+- icons created using separate `svg` to avoid alignment/size issues with icon fonts and easier to maintain than sprites
+- all components covered by simple unit tests using `testing library`
+- general functionality covered by `cypress` test
+- added redirect from any url to `/`
+- added `cors` and `body-parser` packages to the backend to process POST and DELETE requests
+- endpoint urls moved to `.env` file
+
+# Instruction
 
 This exercise is in React and contains a frontend and backend project. The project is compatible with Node v16 and npm v7+.
 
@@ -6,17 +20,6 @@ Set up instructions:
 1. Clone the provided repo and create a branch to submit your work
 2. Run `npm ci` for both projects
 3. Start the projects with `npm start`
-
-**_IMPORTANT: Feel free to add dependencies and change the project structure as you see fit._**
-**_If something is not clear, write down an assumption in the code and move on._**
-
-# What we look for
-Your submission will be judged on:
-- technical completeness
-- visual completeness
-- general coding practices such as readability and maintainability
-- test coverage
-    - production-grade test coverage is not expected but please have enough to indicate how you would test the application
 
 # The Task at Hand
 
