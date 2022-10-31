@@ -1,0 +1,54 @@
+@use "sass:math";
+@import "../../../styles/variables";
+
+.search {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 432px;
+
+  &__icon {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $spacing*1.5;
+    top: 0;
+
+    &_search {
+      left: 0;
+    }
+
+    &_remove {
+      right: math.div($spacing, 4);
+    }
+  }
+
+  &__input {
+    border: 1px solid $grey-2;
+    height: $spacing*1.5;
+    border-radius: math.div($spacing, 4);
+    padding: 0 $spacing*1.5;
+    outline: none;
+    width: 100%;
+    font-size: 14px;
+
+    &::placeholder {
+      font-size: 14px;
+      color: $grey-1;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    top: 100%;
+    font-size: 12px;
+    color: $error-1;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: math.div($spacing, 3);
+    padding: math.div($spacing, 3);
+  }
+}

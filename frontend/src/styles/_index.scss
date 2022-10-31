@@ -1,0 +1,40 @@
+@import "./variables";
+
+:root {
+  --mono-0: #000;
+  --mono-1: #fff;
+  --grey-1: #626F86;
+  --grey-2: #D5DBE4;
+  --primary-1: #012B44;
+  --primary-2: #eff0f3;
+  --error-1: #C82F04;
+  --font-primary-1: 'Roboto', sans-serif;
+  --font-secondary-1: 'Inter', sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+  color: $primary-1;
+  background-color: $mono-1;
+  font-family: $font-primary-1, sans-serif;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+#root {
+  animation: onLoad 2s ease forwards;
+  opacity: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes onLoad {
+  to {
+    opacity: 1;
+  }
+}

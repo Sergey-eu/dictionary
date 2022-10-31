@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.home {
+  display: grid;
+  grid-template-columns: minmax(200px, 320px) minmax(640px, 1fr) minmax(200px, 320px);
+  width: 100%;
+  height: 100%;
+
+  &__content {
+    padding: 0 $spacing*3 $spacing*3;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    @include customScroll;
+  }
+
+  &__header {
+    padding: $spacing*5.66 0 $spacing*1.66;
+    background-color: $mono-1;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    display: flex;
+    gap: $spacing;
+    justify-content: space-between;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $spacing;
+  }
+
+  &__list {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing*1.66;
+  }
+
+  &_mobile {
+    grid-template-columns: 1fr;
+
+    .home__content {
+      padding: 0 $spacing;
+    }
+
+    .home__header {
+      padding: $spacing 0;
+    }
+  }
+}

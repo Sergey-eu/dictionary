@@ -1,0 +1,14 @@
+.quickLink {
+  display: inline-flex;
+  color: inherit;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 2px 0;
+  text-decoration: none;
+  text-transform: capitalize;
+  word-break: break-all;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

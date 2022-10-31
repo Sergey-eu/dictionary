@@ -1,0 +1,21 @@
+.svgIcon {
+  user-select: none;
+  fill: currentColor;
+  z-index: 1;
+  position: relative;
+
+  &_auto {
+    width: auto;
+    height: auto;
+  }
+
+  &_small {
+    width: 16px;
+    height: 16px;
+  }
+
+  &_medium {
+    width: 24px;
+    height: 24px;
+  }
+}

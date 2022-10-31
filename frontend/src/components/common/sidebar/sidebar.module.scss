@@ -1,0 +1,55 @@
+@use "sass:math";
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: $spacing*5.66 $spacing*2 $spacing*2;
+  height: 100%;
+  overflow: hidden;
+
+  &__title {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__container {
+    display: flex;
+    gap: math.div($spacing, 3);
+    margin-top: $spacing*1.5;
+    flex-direction: column;
+    overflow: auto;
+    @include customScroll;
+  }
+
+  &_light {
+    background-color: $primary-2;
+    color: $primary-1;
+  }
+
+  &_dark {
+    background-color: $primary-1;
+    color: $mono-1;
+  }
+
+  &_mobile {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    transition: $transition;
+    padding: $spacing*2 $spacing*2;
+  }
+
+  &_hidden {
+    transform: translateX(100%);
+  }
+
+  &_visible {
+    transform: translateX(0%);
+  }
+}

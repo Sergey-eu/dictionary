@@ -1,0 +1,72 @@
+@use "sass:math";
+@import "../../../styles/variables";
+
+.wordCard {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing;
+  background-color: $primary-2;
+  border-radius: math.div($spacing, 3);
+  padding: $spacing*1.5 $spacing*2;
+  font-size: 16px;
+  font-family: $font-secondary-1;
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    border-bottom: 2px solid $mono-0;
+    padding-bottom: math.div($spacing, 1.1);
+    gap: $spacing;
+  }
+
+  &__title {
+    line-height: 36px;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: math.div($spacing, 2) $spacing*1.66;
+    text-transform: capitalize;
+  }
+
+  &__phonetics {
+    flex-grow: 1;
+    text-transform: none;
+    letter-spacing: 0.5px;
+  }
+
+  &__action {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: $spacing*1.5;
+    height: $spacing*1.5;
+    margin-top: math.div($spacing, 4);
+  }
+
+  &__meaning {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: math.div($spacing, 3);
+
+    &Title {
+      font-style: italic;
+      line-height: 28px;
+
+    }
+
+    &Definitions {
+      margin: 0;
+      padding-left: $spacing;
+    }
+
+    &Definition {
+      line-height: 28px;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
